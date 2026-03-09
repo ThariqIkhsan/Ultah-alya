@@ -1,11 +1,7 @@
 const loginPage = "login.html";
 
 const player = document.querySelector(".bg-music");
-
-setTimeout(()=>{
-player.muted = false;
-player.play();
-},1000);
+document.addEventListener("click", playMusic, {once:true});
 
 player.addEventListener("click",PlayMusic function(){
 
