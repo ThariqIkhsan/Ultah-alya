@@ -1,6 +1,6 @@
-const loginPage = "index.html";
+const loginPage = "login.html";
 
-player.addEventListener("load", function(){
+player.addEventListener("click",PlayMusic function(){
 
     current++;
     
