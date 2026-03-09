@@ -1,9 +1,8 @@
 const loginPage = "login.html";
 
 const player = document.querySelector(".bg-music");
-document.addEventListener("click", playMusic, {once:true});
 
-player.addEventListener("click",PlayMusic function(){
+player.addEventListener("load", function(){
 
     current++;
     
