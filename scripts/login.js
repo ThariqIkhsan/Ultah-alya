@@ -19,6 +19,7 @@ function validateForm() {
     }).then(function () {
       window.location.href = "./birthday.html";
     });
+    
   } else {
     Swal.fire({
       icon: "error",
@@ -28,4 +29,4 @@ function validateForm() {
       confirmButtonColor: "#ff7675",
     });
   }
-}
+}}
