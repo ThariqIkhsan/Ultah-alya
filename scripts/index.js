@@ -2,7 +2,7 @@ const loginPage = "login.html";
 
 const player = document.querySelector(".bg-music");
 
-player.addEventListener("load", function(){
+player.addEventListener("autoplay", function(){
 
     current++;
     
