@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabar yaaa</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#534ed6,#323783);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    background:rgba(56, 56, 57, 0.837);
+    padding:40px;
+    border-radius:15px;
+}
+
+
+
+#countdown{
+    font-size:35px;
+    margin-top:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+    <audio class="bg-music" autoplay></audio>
+
+    <script>
+    
+    const playlist = [
+    "./music/lagu 1.mp3",
+    "./music/lagu 2.mp3",
+    "./music/lagu 3.mp3",
+    "./music/lagu 4.mp3"
+    ];
+    
+    let index = 0;
+    
+    const player = document.querySelector(".bg-music");
+    
+    function playMusic(){
+      player.src = playlist[index];
+      player.play();
+    }
+    
+    player.addEventListener("ended", function(){
+    
+      index++;
+    
+      if(index >= playlist.length){
+        index = 0; // ulang dari lagu pertama
+      }
+    
+      playMusic();
+    
+    });
+    
+    playMusic();
+    
+    </script>
+
+<div class="container">
+    <div class="card">
+        <img src="./img/countdown.jpg" class="icon" width="180px">
+        </div>
+<h1>Gasabar ya mau tau surprisenya kek apa</h1>
+<p> Tungguin</p>
+
+<div id="countdown"></div>
+<p> Lagi yaaa</p>
+</div>
+
+<script>
+
+// waktu target
+const targetDate = new Date("Maret 21, 2026 23:59:59").getTime();
+
+// halaman login
+const loginPage = "login.html";
+
+const timer = setInterval(function(){
+
+const now = new Date().getTime();
+const distance = targetDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+days+" Hari "+hours+" Jam "+minutes+" Menit "+seconds+" Detik";
+
+if(distance < 0){
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "Mengarahkan ke login...";
+    
+    setTimeout(function(){
+        window.location.href = loginPage;
+    },2000);
+}
+
+},1000);
+
+</script>
+
+</body>
+</html>
