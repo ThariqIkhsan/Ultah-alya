@@ -35,7 +35,7 @@ body{
 </head>
 
 <body>
-    <audio class="bg-music" autoplay></audio>
+    <audio class="bg-music" autoplay muted></audio>
 
     <script>
     
@@ -55,7 +55,7 @@ body{
       player.play();
     }
     
-    player.addEventListener("ended", function(){
+    player.addEventListener("click", function(){
     
       index++;
     
