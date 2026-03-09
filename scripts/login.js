@@ -1,7 +1,7 @@
 // login page scripts
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   validateForm();
 });
 
