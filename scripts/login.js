@@ -6,8 +6,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 });
 
 function validateForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  var username = document.getElementById("username").value.trim();
+  var password = document.getElementById("password").valuetrim();
 
   if (username === "THARIQ IKHSAN" && password === "15 AGUSTUS 2002") {
     Swal.fire({
