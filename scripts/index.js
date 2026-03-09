@@ -1,31 +1,14 @@
-// login page scripts
-document.getElementById("loginForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+const loginPage = "index.html";
 
-  validateForm();
-});
+player.addEventListener("ended", function(){
 
-function validateForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-
-  if (username === "THARIQ IKHSAN" && password === "15 AGUSTUS 2002") {
-    Swal.fire({
-      icon: "success",
-      title: "Login berhasil!",
-      text: "Welcome Bogel",
-      showConfirmButton: false,
-      timer: 1500,
-    }).then(function () {
-      window.location.href = "birthday.html";
+    current++;
+    
+    if(current >= playlist.length){
+    current = 0;
+    }
+    
+    player.src = playlist[current];
+    player.play();
+    
     });
-  } else {
-    Swal.fire({
-      icon: "error",
-      title: "Login gagal!",
-      text: "KOK BISA SALAH, DODOL 🤬",
-      confirmButtonText: "Coba lagi",
-      confirmButtonColor: "#ff7675",
-    });
-  }
-}
