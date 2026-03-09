@@ -1,6 +1,6 @@
 const loginPage = "index.html";
 
-player.addEventListener("click", function(){
+player.addEventListener("load", function(){
 
     current++;
     
